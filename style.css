@@ -1,0 +1,158 @@
+:root {
+  --bg: #0e1116;
+  --surface: #141923;
+  --text: #e8edf3;
+  --muted: #9aa6b2;
+  --border: #273142;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  color-scheme: dark;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+  line-height: 1.6;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  width: min(760px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tabs a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.tabs a.active {
+  border-bottom-color: var(--text);
+}
+
+main {
+  width: min(760px, calc(100% - 2rem));
+  margin: 1.5rem auto 3rem;
+}
+
+.post-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.landing-banner {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.banner-kicker {
+  margin: 0 0 0.45rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.landing-banner h1 {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.25;
+}
+
+.banner-subtitle {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+}
+
+.card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.date {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.post-header {
+  width: min(760px, calc(100% - 2rem));
+  margin: 1rem auto 0;
+}
+
+.back-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.post-content {
+  width: min(760px, calc(100% - 2rem));
+  margin: 1rem auto 3rem;
+}
+
+.post-content h1 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+.post-content img,
+.post-content video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
