@@ -110,7 +110,14 @@ main {
   border-radius: 8px;
 }
 
+.post-row:link,
+.post-row:visited {
+  color: var(--text);
+  text-decoration: none;
+}
+
 .post-row-title {
+  flex: 1 1 auto;
   min-width: 0;
   font-size: 1.1rem;
   font-weight: 600;
@@ -119,8 +126,9 @@ main {
 }
 
 .post-row-date {
-  flex-shrink: 0;
+  flex: 0 0 auto;
   white-space: nowrap;
+  text-align: right;
   color: var(--muted);
   font-size: 0.95rem;
   font-weight: 500;
